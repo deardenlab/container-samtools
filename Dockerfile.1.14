@@ -46,17 +46,17 @@ RUN     git clone \
 
 
 WORKDIR /htslib
-RUN     git checkout -f 1.12 &&\
+RUN     git checkout -f 1.14 &&\
         git submodule update --init --recursive
 RUN     make -j && make install
 
 WORKDIR /samtools
-RUN     git checkout -f 1.12 &&\
+RUN     git checkout -f 1.14 &&\
         git submodule update --init --recursive
 RUN     make -j && make install
 
 WORKDIR /bcftools
-RUN     git checkout -f 1.12 &&\
+RUN     git checkout -f 1.14 &&\
         git submodule update --init --recursive
 RUN     make -j && make install
 
